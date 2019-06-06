@@ -1,8 +1,7 @@
 require('../spec.helper')
 
 describe("Person", () => {
-
-    let person = new Person({
+    let person = new Person ({
         weight: 90,
         height: 186
     })
@@ -18,10 +17,11 @@ describe("Person", () => {
     it("should calculate BMI value", () => {
         person.calculate_bmi();
         expect(person.bmiValue).to.equal(26.01);
-    });
+    })
 
     it("should have a BMI Message", () => {
         person.calculate_bmi();
         expect(person.bmiMessage).to.equal('Overweight');
-    });
+    })
+
 });
