@@ -2,22 +2,38 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <meta charset="utf-8">
-    <title></title>
+    <title>BMI Calculator</title>
     <script src="js/person.js"></script>
     <script src="js/bmi_calculator.js"></script>
 </head>
 
 <body>
-
+<div class="header">
+    <h1>Know your body mass index.</h1>
+</div>
+<div class="description">
+        <p>Fill in the form bellow with your weight and height.</p>
+        <p>If you use the Metric system indicate your weight in kilograms</p>
+        <p>and your height in centimeters. If you use the Imperial system</p>
+        <p>indicate your height in inches and you weight in pounds.</p>
+        <p>When you're ready select the method you used and hit Calculate.</p>
+    </div>
+<div class="centerblock">
     <form id="calculate">
         <div id="metric-inputs">
-            <input type="text" id="weight-in-kgs" placeholder="Weight">
-            <input type="text" id="height-in-cm" placeholder="Height">
+            <p class="titles">Metric</p>
+
+            <input type="text" id="weight-in-kgs" placeholder="Weight in kgs">
+            <input type="text" id="height-in-cm" placeholder="Height in cm">
         </div>
         <div id="imperial-inputs">
-                <input type="text" id="weight-in-lbs" placeholder="Weight">
-                <input type="text" id="height-in-in" placeholder="Height">
+            <p class="titles">Imperial</p>
+                <input type="text" id="weight-in-lbs" placeholder="Weight in lbs">
+                <input type="text" id="height-in-in" placeholder="Height in in">
             </div>
             <div class="form-group row">
                     <div class="col-auto">
@@ -30,7 +46,8 @@
 
         <button type="submit" value="Calculate"> Calculate </button>
     </form>
-    <div>
+</div>
+    <div class="result">
         <span id="display_value"></span>
         <span id="display_message"></span>
     </div>
